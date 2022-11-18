@@ -1,28 +1,7 @@
-# <h1 align="center">Manga Web</h1>
+# ADGSTUDIOS-MangaWebsite
 
-# <p align="center"><a href="https://github.com/AJTimePyro/manga-web"><img src="https://github-readme-stats.vercel.app/api/pin?username=AJTimePyro&show_icons=true&theme=dracula&hide_border=true&repo=manga-web"></a></p>
+**Work in progress!**
 
-* :spiral_notepad:[Description](#Description)
-* :memo:[Requirements](#Requirements)
-* :crossed_swords:[Usage](#Usage)
+![image](https://user-images.githubusercontent.com/45560312/202811337-7b64d430-6ca8-4659-863e-1e4eeee1ee3b.png)
 
-
-## Description
-Open Source manga website for manga lovers only.
-This website just steal content(Manga) of other website and display on its page.
-The backend of this web work on Flask, and frontend as usual HTML, CSS and JavaScript.
-And for now it's not that much advanced, because developer is noob.
-
-## Requirements
-* Python 3
-* Some Python Packages (mentioned in [requirements.txt](requirements.txt))
-
-## Usage
-```
-pip install -r requirements.txt
-python app.py
-```
-or
-```
-pip install -r requirements.txt && python app.py
-```
+![image](https://user-images.githubusercontent.com/45560312/202811496-24ff34fa-584e-4c5d-8dde-ecf11617f569.png)
