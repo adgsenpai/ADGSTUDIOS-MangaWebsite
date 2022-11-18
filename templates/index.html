@@ -1,12 +1,32 @@
 {%extends 'base.html' %}
 
-{% block head %} 
+{% block head %}
 <title>Unlimited Manga</title>
 <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
 {% endblock %}
-
-{% block body %}
 <div id="background-img">
     <img src="{{ gifUrl }}" alt="">
 </div>
+
+{% block body %}
+<div id="homeControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url({{ gifUrl }});">
+          <span class="mask bg-gradient-dark"></span>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 my-auto">
+                <h4 class="text-white mb-0 fadeIn1 fadeInBottom">MANGA @ ADGSTUDIOS</h4>
+                <h1 class="text-white fadeIn2 fadeInBottom">マンガ@アドグストゥディオズ</h1>
+                <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Unlimited Manga アンリミテッドマンガ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 {% endblock %}

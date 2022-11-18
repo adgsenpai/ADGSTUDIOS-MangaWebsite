@@ -6,14 +6,24 @@ from flask import (
     Flask,
     render_template,
     url_for,
-    request
+    request,    
+    session
 )
+
+from flask_session import Session
 from helper.manga_page import *
 from helper.search import SearchEngine, RandomAnimeGif
 
 
 ### Creating App Object
 app = Flask(__name__)
+
+#set the secret key.  keep this really secret:
+app.secret_key = 'mySuperSecretKey'
+
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
 
 
 ### Routing
@@ -27,7 +37,7 @@ def homePage():
             return render_template('search.html', result = search.mangaList, query = query)
         
     gif = RandomAnimeGif()
-    return render_template('index.html', gifUrl = gif.imgUrl)
+    return render_template('index.html', gifUrl = gif.imgUrl,contextname="マンガ@アドグストゥディオズ",pagename="Homepage")
 
 # About Page
 @app.route("/about")
@@ -41,31 +51,41 @@ def contactPage():
 
 # Chapter List of Manga
 @app.route("/manga/<string:manga_id>")
-def chapterList(manga_id):
-        # chapter_no = request.args.get('chapterid')
-        # if chapter_no:
-        #     pge = ChapterPage(manga_id, chapter_no)
-        #     return render_template(
-        #         'manga_page.html',
-        #         pageData = pge.pageList
-        #     )
+def chapterList(manga_id):                                                        
     chap = Chapter(manga_id)
+    session['manga_id'] = manga_id
+    session['mangatitle'] = chap.title    
     return render_template(
         'manga.html',
+        mangaid= manga_id,
+        manga_title= chap.title,
         chapList = chap.chapJson,
         title = chap.title,
-        poster = chap.posterUrl
+        poster = chap.posterUrl,
+        description = chap.description,
+        genre = chap.genre,
+        rating = chap.rating,
+        contextname=chap.title,
+        pagename="Chapter List"
     )
 
 # Pages of Manga
 @app.route('/chapters/<int:chapter_id>')
 def chapterPages(chapter_id):
-    pge = ChapterPage(chapter_id)
+    pge = ChapterPage(chapter_id,session['manga_id'])
+ 
     return render_template(
         'manga_page.html',
-        pageData = pge.pageList
-    )
+        pageData = pge.pageList,
+        manga_title = str(session.get('mangatitle')),
+        mangaid= session['manga_id'], 
+        pagename = pge.chapterTitle,       
+        prevLink = pge.previousChapter,
+        nextLink = pge.nextChapter,
+        previousChapName = pge.previousChapName,
+        nextChapName = pge.nextChapName,
 
+    )
 
 ### Running Web
 if __name__ == "__main__":

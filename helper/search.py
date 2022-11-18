@@ -27,6 +27,7 @@ class SearchEngine(CommonThings):
         """
         self.requestToWeb(f'https://api.mangaowl.to/v1/search?q={self.query}')
         self.parsingData()
+
     
     def parsingData(self):
         """
@@ -36,7 +37,7 @@ class SearchEngine(CommonThings):
         resultData = jsonData['results']
 
         if resultData:  # If data exist
-            mangaList = dict()
+            mangaList = dict()            
             count = 0
             for data in resultData:
                 count += 1

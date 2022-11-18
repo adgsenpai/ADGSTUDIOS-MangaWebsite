@@ -4,8 +4,6 @@
 <title></title>
 <script>
     var pageData = JSON.parse({{ pageData| tojson | safe }});
-    // This is not any error it's flask syntax for using
-    // python variable and converting them to json object
 </script>
 <script src="{{ url_for('static', filename = 'js/manga_page.js') }}"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename = 'css/manga_page.css') }}">
@@ -13,4 +11,32 @@
 
 {% block body %}
 <div id="page"></div>
+<!--render link with arrows for next and previous chapter-->
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                {% if prevLink|length %}
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                      <li class="breadcrumb-item text-sm"><p class="opacity-5 text-dark">{{previousChapName}}</li>                      
+                      </ol>                    
+                    <a class="font-weight-bold" href="{{prevLink}}">Previous Chapter</a>                                
+                </nav>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                {% if nextLink|length %}
+                <nav style="float:right" aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                      <li class="breadcrumb-item text-sm"><p class="opacity-5 text-dark">{{nextChapName}}</li>                      
+                      </ol>                    
+                      <a class="font-weight-bold" href="{{nextLink}}">Next Chapter</a>                              
+                </nav>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

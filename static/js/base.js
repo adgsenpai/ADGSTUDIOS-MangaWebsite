@@ -1,5 +1,3 @@
-
-
 // For search Box
 function searchQuery(e) {
     var query
@@ -12,7 +10,7 @@ document.getElementById(
     "search-box"
 ).addEventListener(
     'keypress',
-    (e)=> {
+    (e) => {
         if (e.key == "Enter") {
             searchQuery(e);
         };
@@ -24,8 +22,7 @@ document.getElementById(
     "search-btn"
 ).addEventListener(
     'click',
-    (e)=> {
-        console.log('hi')
+    (e) => {
         searchQuery(e);
     }
 );

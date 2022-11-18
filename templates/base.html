@@ -2,44 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">
-
-    {% block head %}{% endblock %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="/static/img/favicon.png">
+  <title>    
+  </title>  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />  
+  <link href="/static/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/static/css/nucleo-svg.css" rel="stylesheet" />  
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="/static/css/nucleo-svg.css" rel="stylesheet" />  
+  <link id="pagestyle" href="/static/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
+  {% block head %}
+  {% endblock %}
 </head>
 
-<body>
-    <div>
-        <nav id="menubar">
-            <ul>
-                <li class="menu-page">
-                    <a href="/">Home</a>
-                </li>
-                <li class="menu-page">
-                    <a href="/about">About</a>
-                </li>
-                <li class="menu-page">
-                    <a href="/contact">Contact US</a>
-                </li>
-                <li class="menu-page">
-                    <div id="search-box">
-                        <input type="text" name="search-query" placeholder="Type To Search">
-                        <button id="search-btn">
-                            <img src="{{ url_for('static', filename = 'icons/search.png') }}" alt="">
-                        </button>
-                    </div>
-                </li>
-            </ul>
+<body class="g-sidenav-show  bg-gray-100">
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">   
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="/">Manga @ ADGSTUDIOS</a></li>
+            {% if mangaid %}
+            <li class="breadcrumb-item text-sm"><a class="font-weight-bold" href="/manga/{{mangaid}}">{{manga_title}}</a></li>            
+            {% else %}
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">{{contextname}}</li>
+            {% endif %}
+          </ol>
+          <h6 class="font-weight-bolder mb-0">{{pagename}}</h6>
         </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div id="search-box">
+            <div class="input-group">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input id="search-query" type="text" class="form-control" placeholder="Search for Manga">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row mt-4">    
+        {% block body %}
+        {% endblock %}            
+      </div>
+      <footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                made with <i class="fa fa-heart"></i> by
+                <a href="https://adgstudios.co.za" class="font-weight-bold" target="_blank">ADGSTUDIOS エーディグストゥディオス</a>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-    {% block body %}{% endblock %}
+  </main>
+  <!--   Core JS Files   -->
+  <script src="/static/js/core/popper.min.js"></script>
+  <script src="/static/js/core/bootstrap.min.js"></script>
+  <script src="/static/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="/static/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="/static/js/plugins/chartjs.min.js"></script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="/static/js/soft-ui-dashboard.min.js?v=1.0.6"></script>
+  <script src="/static/js/base.js"></script>
 </body>
-<script src="{{ url_for('static', filename = 'js/base.js') }}"></script>
 
 </html>

@@ -20,8 +20,12 @@ class Chapter(CommonThings):
         Getting Chapters name and id
         """
         self.requestToWeb(f'https://api.mangaowl.to/v1/stories/{self.mangaID}')
+       
         
-        jsonData = json.loads(self.webcontent)
+        jsonData = json.loads(self.webcontent)    
+        self.description = jsonData['description']
+        self.genre = jsonData['genres']
+        self.rating = jsonData['rating']        
         self.title = jsonData['name']
         self.posterUrl = jsonData['thumbnail']
         resultData = jsonData['chapters']
