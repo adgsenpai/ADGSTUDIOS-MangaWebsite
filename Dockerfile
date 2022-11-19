@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 LABEL Maintainer="adgsenpai"
 
-EXPOSE 8000
+EXPOSE 5000
 
 RUN apt-get update
 
@@ -13,4 +13,4 @@ RUN apt-get install python3-pip -y
 
 RUN pip3 install -r requirements.txt
 
-CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn"  , "-b", "0.0.0.0:5000", "app:app"]
