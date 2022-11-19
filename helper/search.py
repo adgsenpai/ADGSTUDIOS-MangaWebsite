@@ -36,20 +36,17 @@ class SearchEngine(CommonThings):
         jsonData = json.loads(self.webcontent)
         resultData = jsonData['results']
 
+        mangaList = []
         if resultData:  # If data exist
-            mangaList = dict()            
-            count = 0
-            for data in resultData:
-                count += 1
-                mangaList[count] = {
+            
+            for data in resultData:                
+                mangaList.append({
                     'title' : data['name'],
-                    'url-data' : data['slug'],
+                    'url' : '/manga/'+data['slug'],
                     'img' : data['thumbnail']
-                }
-            self.mangaList = json.dumps(mangaList)
-        else:   # If data not exist
-            self.mangaList = None
-
+                })
+        self.mangaList = mangaList
+            
 
 ### Random Anime Gif Finder
 class RandomAnimeGif(CommonThings):

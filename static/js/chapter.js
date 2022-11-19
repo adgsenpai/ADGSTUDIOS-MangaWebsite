@@ -12,7 +12,12 @@ window.onload = () => {
         var aTag = document.createElement('a');
 
         // Adding Attributes
-        aTag.href = `/chapters/${chapData['chapter-id']}`;
+        aTag.onclick = () => {
+            topbar.show();
+            // href to link
+            document.location.href = `/chapters/${chapData['chapter-id']}`;
+        }
+        aTag.style = "cursor: pointer;";
         aTag.innerText = chapData['chapter-title'];
         chapterDom.className = 'chapter';
 

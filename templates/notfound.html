@@ -1,0 +1,27 @@
+{%extends 'base.html' %}
+
+{% block head %}
+<title>Unlimited Manga</title>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<div id="homeControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url(/static/img/sad-anime-cat-girl.gif);">
+          <span class="mask bg-gradient-dark"></span>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 my-auto">
+                <h4 class="text-white mb-0 fadeIn1 fadeInBottom">Neko chan is sad because you are lost.</h4>
+                <h4 class="text-white mb-0 fadeIn1 fadeInBottom">ねこちゃんはあなたが迷子になって悲しいです。</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,79 +1,55 @@
 {
-    "count": 26,
-    "next": "https://api.mangaowl.to/v1/chapters/472986/images?page=2",
+    "count": 16,
+    "next": null,
     "previous": null,
     "results": [
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/1.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/1.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/2.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/2.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/3.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/3.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/4.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/4.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/5.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/5.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/6.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/6.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/7.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/7.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/8.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/8.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/9.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/9.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/10.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/10.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/11.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/11.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/12.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/12.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/13.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/13.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/14.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/14.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/15.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/15.jpg"
         },
         {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/16.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/17.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/18.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/19.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/20.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/21.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/22.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/23.webp"
-        },
-        {
-            "image": "https://cdn-2.mangaowl.to/media/content/294b0c42-cabf-4a0a-84b5-44716ac8e0be/472986/24.webp"
+            "image": "https://cdn-2.mangaowl.to/media/content/7443f0a3-980e-4d08-83cd-bc7f4816ea0b/727895/16.jpg"
         }
     ]
 }

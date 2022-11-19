@@ -1,5 +1,6 @@
 // For search Box
 function searchQuery(e) {
+    topbar.show();
     var query
     query = document.querySelector('#search-box input').value;
     window.location.href = `/?search=${query}`;
@@ -17,6 +18,12 @@ document.getElementById(
     }
 );
 
+const showTopbar = (url) => {
+    topbar.show();
+    //redirecting to url
+    window.location.href = url;
+}
+
 // On clicking on search icon
 document.getElementById(
     "search-btn"
@@ -27,3 +34,14 @@ document.getElementById(
     }
 );
 
+//check if any links are clicked then show topbar
+document.querySelectorAll('a').forEach(
+    (a) => {
+        a.addEventListener(
+            'click',
+            (e) => {
+                topbar.show();
+            }
+        )
+    }
+)
