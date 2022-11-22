@@ -56,8 +56,10 @@ def chapterList(manga_id):
     chap = Chapter(manga_id)
     session['manga_id'] = manga_id
     session['mangatitle'] = chap.title    
+    route = 'manga/' + manga_id
     return render_template(
         'manga.html',
+        route = route,
         mangaid= manga_id,
         manga_title= chap.title,
         chapList = chap.chapJson,

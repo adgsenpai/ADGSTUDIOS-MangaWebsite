@@ -1,8 +1,22 @@
 {%extends 'base.html' %}
 
 {% block head %}
-<title>Unlimited Manga</title>
+<title>Unlimited Manga アンリミテッドマンガ</title>
 <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+<meta name="title" content="Unlimited Manga アンリミテッドマンガ">
+<meta name="description" content="This free manga website is loaded with the most entertaining manga comics, which are updated regularly.">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manga.adgstudios.co.za/">
+<meta property="og:title" content="Unlimited Manga アンリミテッドマンガ">
+<meta property="og:description" content="This free manga website is loaded with the most entertaining manga comics, which are updated regularly.">
+<meta property="og:image" content="https://manga.adgstudios.co.za/static/img/manga.webp">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://manga.adgstudios.co.za/">
+<meta property="twitter:title" content="Unlimited Manga アンリミテッドマンガ">
+<meta property="twitter:description" content="This free manga website is loaded with the most entertaining manga comics, which are updated regularly.">
+<meta property="twitter:image" content="https://manga.adgstudios.co.za/static/img/manga.webp">
 {% endblock %}
 <div id="background-img">
     <img src="{{ gifUrl }}" alt="">
