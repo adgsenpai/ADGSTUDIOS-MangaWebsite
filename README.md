@@ -1,7 +1,7 @@
-# ADGSTUDIOS-MangaWebsite
+![manga-min](https://user-images.githubusercontent.com/45560312/203313310-04ffc06d-f551-40c4-8f5e-8cc126a8b91f.png)
 
-**Work in progress!**
+# Getting Started 
 
-![image](https://user-images.githubusercontent.com/45560312/202811337-7b64d430-6ca8-4659-863e-1e4eeee1ee3b.png)
-
-![image](https://user-images.githubusercontent.com/45560312/202811496-24ff34fa-584e-4c5d-8dde-ecf11617f569.png)
+- clone repo
+- pip3 install -r requirements.txt
+- python3 app.py
